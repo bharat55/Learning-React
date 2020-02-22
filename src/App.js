@@ -9,6 +9,9 @@ function App() {
   return (
     <div className="App">
       <Hello/>
+      <Welcome name="Bharat Rathor" city="Indore">
+        <p> This is the child element</p>
+      </Welcome>
     </div>
   );
 }
