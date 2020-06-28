@@ -6,13 +6,13 @@ import Welcome from './components/Welcome'
 import Hello  from './components/Hello'
 import Message  from './components/Message'
 import ParentComponent from './components/ParentComponet'
-import UserGreet from './components/UserGreet'
+import PersonList from './components/PersonList'
 
  
 function App() {
   return (
     <div className="App">
-      <UserGreet/>
+      <PersonList/>
     </div>
   );
 }
