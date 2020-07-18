@@ -6,13 +6,14 @@ import Welcome from './components/Welcome'
 import Hello  from './components/Hello'
 import Message  from './components/Message'
 import ParentComponent from './components/ParentComponet'
-import PersonList from './components/PersonList'
+import TodoList from './components/TodoList'
+
 
  
 function App() {
   return (
     <div className="App">
-      <PersonList/>
+      <TodoList/>
     </div>
   );
 }

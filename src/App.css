@@ -1,5 +1,23 @@
 .App {
   text-align: center;
+  background-color: aqua;
+  padding:10px;
+  width: 50%;
+  margin:auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.add-item-btn {
+  height: 34px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin-left: 18px;
+  font-family: monospace;
+  color: green;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
 
 .App-logo {
@@ -24,10 +42,50 @@
   color: white;
 }
 
+form input {
+  width: 50%;
+  height: 30px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background: #e0eef1;
+}
+
+ul li {
+  border: 1px solid transparent;
+  padding: 10px;
+  background: #d9f1f0e8;
+  list-style: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: italic;
+  text-align: initial;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-left: 72px;
+  border-radius: 4px;
+  width:50%;
+  margin-bottom: 10px;
+}
+
+
 .App-link {
   color: #61dafb;
 }
-
+button.remove-item-btn {
+  float: right;
+  align-self: center;
+  border: none;
+  font-style: italic;
+  color: #ff4800;
+  background: none;
+  cursor: pointer;
+}
+button.remove-item-btn:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
