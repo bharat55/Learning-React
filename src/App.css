@@ -94,3 +94,6 @@ button.remove-item-btn:hover {
     transform: rotate(360deg);
   }
 }
+body {
+  background-image: url('diary.jpeg');
+}

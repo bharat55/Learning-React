@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import './../TodoList.css';
+import ItemList from './ItemList'
 
 class TodoList extends Component {
   constructor(props) {
@@ -33,22 +34,25 @@ class TodoList extends Component {
     var currentList = this.state.itemList;
     var length = currentList.length;
     var id = 0;
-    if (length == 0){
-      id = 1
+    if (this.state.task != ""){
+      if (length == 0){
+        id = 1
+      } else {
+        id = currentList[length-1].id + 1
+      }
+      var newItem = {
+        id: id,
+        item: this.state.task,
+      }
+      
+      currentList.push(newItem)
+      this.setState({
+        itemList: currentList,
+        task: ""
+      });
     } else {
-      id = currentList[length-1].id + 1
-    }
-    var newItem = {
-      id: id,
-      item: this.state.task,
-    }
-    
-    currentList.push(newItem)
-    this.setState({
-      itemList: currentList,
-      task: ""
-    });
-    
+      alert("Please Enter a task first !");
+    } 
     console.log(this.state.itemList)
   }
   
@@ -70,11 +74,7 @@ class TodoList extends Component {
           <button className="add-item-btn" type="submit" onClick = {(event) => (this.addItemsToList(event))} 
           >Add Item</button>
         </form>
-        <div className="item-list">
-          <ul>
-            {items}  
-          </ul>
-        </div>
+        <ItemList items={items}/>
       </div>
     )
   }
